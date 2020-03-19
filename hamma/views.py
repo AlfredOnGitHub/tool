@@ -1,3 +1,4 @@
 from django.shortcuts import render
 
-# Create your views here.
+def nuevo_usuario(request):
+    return render(request, 'hamma/nuevo_usuario.html', {})
