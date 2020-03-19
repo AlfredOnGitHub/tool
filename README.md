@@ -1,2 +1,2 @@
 # tool
-Django WebApp
+Django WebApp but everyday gets harder.
