@@ -1,5 +1,5 @@
 """
-WSGI config for test project.
+WSGI config for tool project.
 
 It exposes the WSGI callable as a module-level variable named ``application``.
 
