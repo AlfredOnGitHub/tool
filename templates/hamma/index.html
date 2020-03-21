@@ -16,8 +16,9 @@
     <div class="tf">Who tf r u?</div>
     {% if user.is_authenticated %}
         <h2>Hello {{ user.username }}</h2>
+        {{ view.app }}
     {% else %}
-        <h2>Register or Login to see what's up</h2>
+        <h2>Sign up or Login to see what's up</h2>
     {% endif %}
   </div>
 </div>

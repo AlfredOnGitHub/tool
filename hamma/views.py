@@ -4,6 +4,7 @@ from django.contrib.auth import authenticate, login, logout
 from django.http import HttpResponseRedirect, HttpResponse
 from django.urls import reverse
 from django.contrib.auth.decorators import login_required
+from datetime import datetime
 
 def index(request):
     return render(request,'hamma/index.html')
@@ -55,8 +56,9 @@ def user_login(request):
             else:
                 return HttpResponse("Your account was inactive.")
         else:
-            print("Someone tried to login and failed.")
-            print("They used username: {} and password: {}".format(username,password))
             return HttpResponse("Invalid login details given")
     else:
         return render(request, 'hamma/login.html', {})
+
+def app(request):
+    return render(request, 'hamma/ok.html', {})
