@@ -133,7 +133,7 @@ LOGGING = {
         'file': {
             'level': 'INFO',
             'class': 'logging.FileHandler',
-            'filename': 'logaritmos.txt',
+            'filename': 'logs.txt',
         },
     },
     'loggers': {
