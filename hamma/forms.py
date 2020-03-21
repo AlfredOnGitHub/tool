@@ -1,7 +1,16 @@
-from django import forms 
-   
-# creating a form  
-class Registro(forms.Form): 
-    username = forms.CharField(max_length = 15, min_length=6, required=True)  
-    password = forms.CharField(widget = forms.PasswordInput(), required=True) 
-    email = forms.EmailField(required=True)
+from django import forms
+from hamma.models import Usuario
+from django.contrib.auth.models import User
+
+class Formulario(forms.ModelForm):
+    password = forms.CharField(widget=forms.PasswordInput())
+    
+    class Meta():
+        model = User
+        fields = ('username','password','email')
+
+class Usuario(forms.ModelForm):
+     
+    class Meta():
+        model = Usuario
+        fields = ('portfolio_site','profile_pic')

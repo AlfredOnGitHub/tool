@@ -1,7 +1,9 @@
-from django.urls import path, include
-from . import views
+from django.urls import path
+from hamma import views
 
-urlpatterns = [
-    path('', views.index),
-    path('registrarse/', views.registrarse),
+app_name = 'hamma'
+
+urlpatterns=[
+    path('signup/',views.signup,name='signup'),
+    path('user_login/',views.user_login,name='user_login'),
 ]
